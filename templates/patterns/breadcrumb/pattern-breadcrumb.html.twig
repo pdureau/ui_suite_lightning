@@ -1,0 +1,21 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('slds-breadcrumb_' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+<nav role="navigation" aria-label="Breadcrumbs">
+  <ol{{ attributes.addClass(['slds-breadcrumb', 'slds-list_horizontal', 'slds-wrap']) }}>
+    {% for item in items %}
+      {% if item.url %}
+        <li class="slds-breadcrumb__item">
+        <a href="{{ item.url }}">{{ item.text }}</a>
+        </a>
+      {% else %}
+        <li class="slds-breadcrumb__item">
+        {{ item.text }}
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>

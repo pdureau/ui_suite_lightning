@@ -1,0 +1,24 @@
+tabs:
+  label: Tabs
+  description: Tabs keeps related content in a single container that is shown and hidden through navigation. https://lightningdesignsystem.com/components/tabs/
+  variants:
+    default:
+      label: Default
+    medium:
+      label: Medium
+    large:
+      label: Large
+    sub_tabs:
+      label: Subtabs
+      description: Subtabs are used to provide an additional level of navigation below the Global Navigation Tab Bar. Use these tabs when users need to work across multiple sub-pages within a single navigation item.
+  fields:
+    items:
+      type: array
+      label: Items
+      description: The tabs items
+      preview:
+        - active: true
+          uri: "#"
+          label: First
+        - label: Second
+          uri: "#"

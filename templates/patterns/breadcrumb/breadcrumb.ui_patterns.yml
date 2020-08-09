@@ -1,0 +1,13 @@
+breadcrumb:
+  label: Breadcrumbs
+  description: Use breadcrumbs to note the path of a record and help the user to navigate back to the parent. https://lightningdesignsystem.com/components/breadcrumbs/
+  fields:
+    items:
+      type: array
+      label: Items
+      description: The breadcrumb items
+      preview:
+        - url: "#"
+          text: Parent Entity
+        - text: Parent Record Name
+          url: "#"
