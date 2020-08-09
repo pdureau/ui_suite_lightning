@@ -1,0 +1,10 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('slds-box_' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+<div{{ attributes.addClass('slds-box') }}>
+  {{ content }}
+</div>

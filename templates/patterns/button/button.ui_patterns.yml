@@ -1,0 +1,39 @@
+button:
+  label: Button
+  description: Buttons are clickable items used to perform an action. https://lightningdesignsystem.com/components/buttons/
+  variants:
+    default:
+      label: Text
+    nautral:
+      label: Neutral
+    brand:
+      label: "Brand"
+      description: The brand color tokens can be overridden for theme specific usage. The Brand button generally should only be used once per component screen at any one time. It is used for when there is an action that is clearly more important than the other actions and you need to draw attention to it.
+    outline_brand:
+      label: Outline Brand
+      description: The brand color tokens can be overridden for theme specific usage.
+    inverse:
+      label: Inverse
+      description: Use the inverse button on dark backgrounds.
+    destructive:
+      label: Destructive
+      description: This button is used to indicate a destructive action to the user, like permanently erasing data.
+    text_destructive:
+      label: Text Destructive
+      description: This button is used to indicate a destructive action to the user, like permanently erasing data. Use this version when the Destructive button would be too distracting to the experience.
+    success:
+      label: Success
+  fields:
+    label:
+      type: text
+      label: Label
+      description: The button label
+      preview: Submit
+    url:
+      type: text
+      label: URL
+      description: The button URL. Optional.
+      preview: http://example.com
+    # TODO : disable settings
+    # TODO: icon field or setting
+    # TODO: icon position setting

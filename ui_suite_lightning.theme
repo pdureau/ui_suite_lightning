@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * @file
+ * The ui_suite_bootstrap hooks.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function ui_suite_lightning_preprocess_page(&$variables) {
+  // TODO: It would be better to have a settings.
+  $variables['container'] = 'slds-container_x-large slds-container_center slds-theme_default slds-p-around_medium';
+}
+

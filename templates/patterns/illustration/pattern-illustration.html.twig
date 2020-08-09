@@ -1,0 +1,15 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('slds-illustration_' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+<div{{ attributes.addClass('slds-illustration') }}>
+
+  <div class="slds-text-longform">
+    <h3 class="slds-text-heading_medium">{{ heading }}</h3>
+    <p class="slds-text-body_regular">{{ body }}</p>
+  </div>
+
+</div>

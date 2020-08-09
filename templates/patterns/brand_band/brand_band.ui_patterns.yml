@@ -1,0 +1,12 @@
+brand_band:
+  label: Brand band
+  description: The brand band provides theming capability that adds personality and improves information density and contrast https://lightningdesignsystem.com/components/brand-band/
+  variants:
+    medium:
+      label: "Medium"
+      description: This is the most common use case for the brand band. The brand band has a gradient fade into the background color of the page. A dark variant of the page background color fades down from the top of the brand band.
+    small:
+      label: Small
+    large:
+      label: Large
+      description: The brand color tokens can be overridden for theme specific usage.

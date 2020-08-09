@@ -1,0 +1,15 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('slds-button_' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+{% if url or attributes.href %}
+  {% set url = url ?: attributes.href %}
+  <a{{ attributes.addClass('slds-button').setAttribute('href', url) }}>{{ label }}</a>
+{% else %}
+  <button{{ attributes.addClass('slds-button') }}>
+  {{ label }}
+  </button>
+{% endif %}

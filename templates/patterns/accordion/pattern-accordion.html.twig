@@ -1,0 +1,26 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('slds-accordion_' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+<ul{{ attributes.addClass('slds-accordion') }}>
+  {% for item in items %}
+  <li class="slds-accordion__list-item">
+    <section class="slds-accordion__section">
+      <div class="slds-accordion__summary">
+        <h3 class="slds-accordion__summary-heading">
+          <button aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action">
+            <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+            </svg>
+            <span class="slds-accordion__summary-content" title="Accordion summary">{{ item.summary }}</span>
+          </button>
+        </h3>
+      </div>
+      <div class="slds-accordion__content" id="accordion-details-01">{{ item.details }}</div>
+    </section>
+  </li>
+  {% endfor %}
+</ul>

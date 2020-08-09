@@ -1,0 +1,23 @@
+nav_vertical:
+  label: Vertical Navigation
+  description: Navigation represents a list of links that either take the user to another page or parts of the page the user is in. https://lightningdesignsystem.com/components/vertical-navigation/
+  variants:
+    default:
+      label: Default
+    compact:
+      label: Compact
+    shade:
+      label: Shaded
+    shade__compact:
+      label: Shaded & Compact
+  fields:
+    label:
+      type: text
+      label: Label
+      description: The button label
+      preview: Submit
+    url:
+      type: text
+      label: URL
+      description: The button URL. Optional.
+      preview: http://example.com

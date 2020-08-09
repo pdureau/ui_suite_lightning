@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * UI Pattern meta information.
+ */
+#}
+
+{% if pattern is not empty %}
+
+  {# Pattern name and desciption. #}
+  <h3 class="slds-text-heading_large  slds-m-vertical_medium pattern-preview__label">{{ pattern.label }}</h3>
+  <p class="pattern-preview__description">{{ pattern.description }}</p>
+
+  {# Pattern fields descriptions. #}
+  <table class="pattern-preview__fields slds-table slds-table_bordered slds-m-vertical_medium">
+    <thead>
+    <tr>
+      <td></td>
+      <th>{{ "Name"|t }}</th>
+      <th>{{ "Label"|t }}</th>
+      <th>{{ "Type"|t }}</th>
+      <th>{{ "Description"|t }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for field in pattern.fields %}
+      <tr>
+        <th>{{ "Field"|t }}</td>
+        <td><code>{{ field.name }}</code></td>
+        <td>{{ field.label }}</td>
+        <td><code>{{ field.type }}</code></td>
+        <td class="slds-cell-wrap">{{ field.description }}</td>
+      </tr>
+    {% endfor %}
+    {% for name, setting in pattern.additional.settings %}
+      <tr>
+        <th>{{ "Setting"|t }}</td>
+        <td><code>{{ name }}</code></td>
+        <td>{{ setting.label }}</td>
+        <td><code>{{ setting.type }}</code></td>
+        <td>{{ setting.description }}
+        {% if setting.options %}
+        <ul>
+        {% for key, label in setting.options %}
+          <li>{{ key }}: {{ label }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% endif %}

@@ -1,0 +1,14 @@
+card:
+  label: Card
+  description: Cards are used to apply a container around a related grouping of information. https://lightningdesignsystem.com/components/cards/
+  fields:
+    label:
+      type: text
+      label: Label
+      description: The button label
+      preview: Submit
+    url:
+      type: text
+      label: URL
+      description: The button URL. Optional.
+      preview: http://example.com

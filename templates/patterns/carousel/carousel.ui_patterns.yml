@@ -1,0 +1,12 @@
+carousel:
+  label: Carousel
+  description: A carousel allows multiple pieces of featured content to occupy an allocated amount of space. A Carousel can accept a maximum number of 5 panels where only 1 panel is visible at a time. https://lightningdesignsystem.com/components/carousel/
+  fields:
+    content:
+      type: render
+      label: content
+      description: The box content
+      preview:
+        - type: html_tag
+          tag: p
+          value: This is a box.

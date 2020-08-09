@@ -1,0 +1,22 @@
+illustration:
+  label: Illustration
+  description: An illustration is an image and inline text that work in tandem to communicate a state in a more friendly way. https://lightningdesignsystem.com/components/illustration/
+  variants:
+    default:
+      label: Default
+    small:
+      label: Small
+    large:
+      label: "Large"
+  fields:
+    heading:
+      type: text
+      label: Label
+      description: The button label
+      preview: Lorem ipsum dolor
+    body:
+      type: render
+      label: Message Body
+      description: Illustrations can include message body text below the heading to further communicate the state of the component. However, illustrations cannot have a message body without heading text To ensure the readability of your text, we recommend limiting each line to 66 characters.
+      preview: Lorem ipsum dolor sit amet, consectetur
+    # TODO: settings avec SVG

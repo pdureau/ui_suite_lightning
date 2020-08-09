@@ -1,0 +1,21 @@
+box:
+  label: Box
+  description: A box theme applies spacing, a border, and rounded corners to areas of content. https://www.lightningdesignsystem.com/utilities/box/
+  variants:
+    default:
+      label: Base
+    small:
+      label: Small
+    x_small:
+      label: "X-Small"
+    xx_small:
+      label: XX-Small
+  fields:
+    content:
+      type: render
+      label: content
+      description: The box content
+      preview:
+        - type: html_tag
+          tag: p
+          value: This is a box.

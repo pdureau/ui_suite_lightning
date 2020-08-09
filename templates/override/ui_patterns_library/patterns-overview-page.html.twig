@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * UI Pattern library page template, override this in your theme.
+ */
+#}
+
+<div class="slds-grid slds-gutters">
+
+{% if patterns is not empty %}
+  <div class="slds-col slds-size_2-of-12">
+  <h2 class="slds-hidden">{{ "Available patterns"|t }}</h2>
+
+  {# List of available patterns with anchor links. #}
+  <nav class="slds-nav-vertical" aria-label="Sub page">
+    <div class="slds-nav-vertical__section">
+      <ul>
+        {% for pattern_name, pattern in patterns %}
+          <li class="slds-nav-vertical__item">
+            <a class="slds-nav-vertical__action" href="#{{ pattern_name }}">{{ pattern.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+
+  </div>
+  
+  <div class="slds-col slds-size_10-of-12">
+  {% for pattern_name, pattern in patterns %}
+
+    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }} slds-m-vertical_xx-large">
+      {# Pattern name and desciption. #}
+      <a name="{{ pattern_name }}"></a>
+      {{ pattern.meta }}
+
+      {# Rendered pattern preview. #}
+      {{ pattern.rendered }}
+
+      {# Link to standalone pattern preview page.#}
+      <p>
+        <a href="{{ url('ui_patterns.patterns.single', {'name': pattern_name}) }}" class="pattern-preview__view">
+          {% trans %}View {{ pattern.label }} as stand-alone{% endtrans %}
+        </a>
+      </p>
+    </div>
+  {% endfor %}
+  </div>
+
+{% endif %}
+
+</div>

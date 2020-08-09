@@ -1,0 +1,20 @@
+context_bar:
+  label: Global Navigation
+  description: Global Navigation is the list of navigation links your users find in the Header on every page in Salesforce. Your Global Navigation includes a Navigation Bar where your users find the App Launcher, App Name, and Pages that each App includes. https://lightningdesignsystem.com/components/global-navigation/
+  variants:
+    default:
+      label: Default
+    tabs:
+      label: Tabs
+  fields:
+    heading:
+      type: text
+      label: Label
+      description: The button label
+      preview: Lorem ipsum dolor
+    body:
+      type: render
+      label: Message Body
+      description: Illustrations can include message body text below the heading to further communicate the state of the component. However, illustrations cannot have a message body without heading text To ensure the readability of your text, we recommend limiting each line to 66 characters.
+      preview: Lorem ipsum dolor sit amet, consectetur
+    # TODO: settings avec SVG

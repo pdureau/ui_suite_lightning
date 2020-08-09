@@ -1,0 +1,15 @@
+accordion:
+  label: Accordion
+  description: An accordion allows a user to toggle the display of a section of content. Accordions are composed of a list of longer blocks of text, with a header button to toggle the visibility of each block. https://lightningdesignsystem.com/components/accordion/
+  fields:
+    items:
+      type: array
+      label: Items
+      description: The accordion items
+      preview:
+        - summary: Summary 1
+          details: Accordion details - A
+        - summary: Summary 2
+          details: Accordion details - B
+        - summary: Summary 3
+          details: Accordion details - C
