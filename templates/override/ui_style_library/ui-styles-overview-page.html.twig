@@ -6,21 +6,28 @@
 #}
 
 {% if styles is not empty %}
-  <h2>{{ "Available styles"|t }}</h2>
+<div class="slds-grid slds-gutters">
 
-  {# List of available styles with anchor links. #}
-  <ul>
-    {% for style in styles %}
-      <li>
-        <a href="#{{ style.id }}">{{ style.label }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="slds-col slds-size_2-of-12">
+    <h2 class="slds-hidden">{{ "Available styles"|t }}</h2>
 
-  <hr>
+    {# List of available styles with anchor links. #}
+    <nav class="slds-nav-vertical" aria-label="Sub page">
+      <div class="slds-nav-vertical__section">
+      <ul>
+        {% for style in styles %}
+          <li class="slds-nav-vertical__item">
+            <a class="slds-nav-vertical__action" href="#{{ style.id }}">{{ style.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      </div>
+    </nav>
+  </div>
 
+  <div class="slds-col slds-size_10-of-12">
   {% for style in styles %}
-    <h3 id="{{ style.id }}">{{ style.label }}</h3>
+    <h3 class="slds-text-heading_large  slds-m-vertical_medium pattern-preview__label" id="{{ style.id }}">{{ style.label }}</h3>
     {% if style.description %}
     <p>{{ style.description }}</p>
     {% endif %}
@@ -28,9 +35,8 @@
       {% set style_attributes = create_attribute().addClass(id).addClass(style.previewed_with) %}
       <p{{ style_attributes }}>{{ label }} ({{ id }})</p>
     {% endfor %}
-    <hr>
   {% endfor %}
+  </div>
+  
+</div>
 {% endif %}
-
-
-

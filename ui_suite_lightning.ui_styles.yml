@@ -1,0 +1,39 @@
+# https://lightningdesignsystem.com/utilities/text/
+text:
+  label: Text
+  description: "For consistent typography throughout the application, we created text helper classes for headings and body text."
+  options:
+    slds-text-body: Body
+    slds-text-body_small: Body - Small
+    slds-text-heading_large: Heading - Large
+    slds-text-heading_medium: Heading - Medium
+    slds-text-heading_small: Heading - Small
+    slds-text-title: Title
+    slds-text-title_cap: Title Uppercase
+    slds-text-longform: Longform
+
+# https://lightningdesignsystem.com/utilities/text/
+text_align:
+  label: Text Align
+  options:
+    slds-text-align_left: Left
+    slds-text-align_right: Right
+    slds-text-align_center: Center
+
+# https://lightningdesignsystem.com/utilities/text/
+text_color:
+  label: Text Color
+  options:
+    slds-text-color_default: Default
+    slds-text-color_success: Success
+    slds-text-color_weak: Weak
+    slds-text-color_error: Error
+    slds-text-color_destructive: Destructive
+    slds-text-color_inverse: Inverse
+    slds-text-color_inverse-weak: Inverse Weak
+
+# https://lightningdesignsystem.com/utilities/text/
+text_font_monospace:
+  label: Monospace
+  options:
+    slds-text-font_monospace: Monospace

@@ -5,9 +5,9 @@
  */
 #}
 
+{% if patterns is not empty %}
 <div class="slds-grid slds-gutters">
 
-{% if patterns is not empty %}
   <div class="slds-col slds-size_2-of-12">
   <h2 class="slds-hidden">{{ "Available patterns"|t }}</h2>
 
@@ -47,6 +47,5 @@
   {% endfor %}
   </div>
 
-{% endif %}
-
 </div>
+{% endif %}
